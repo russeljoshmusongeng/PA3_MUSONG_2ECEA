@@ -10,7 +10,7 @@ Previewing the data (first and last rows)
 
 Picking out specific rows and columns using codes like .iloc and .loc.
 
-#### Problem 1 — Surname_Pandas-P1.py
+#### Problem 1 
 
 Code:
 
@@ -40,7 +40,7 @@ I loaded the dataset from a CSV link using ````pd.read_csv()````, then used ````
 
 Think of this part as “opening the file and peeking at the top and bottom of the list.”
 
-#### Problem 2 — Surname_Pandas-P2.py
+#### Problem 2 
 Code:
 ````
 import pandas as pd
