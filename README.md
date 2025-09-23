@@ -26,6 +26,7 @@ print(cars.head())
 # Show the last 5 rows
 print(cars.tail())
 ````
+I loaded the dataset from a CSV link using ````pd.read_csv()````, then used ````.head()```` and ````.tail()```` to quickly preview the first 5 rows and last 5 rows. This is better than printing the whole table.
 
 #### How it Works?
 
@@ -58,7 +59,7 @@ print(cars.loc[cars["Model"] == "Camaro Z28", ["Model", "cyl"]])
 sel = (cars["Model"] == "Mazda RX4 Wag") | (cars["Model"] == "Ford Pantera L") | (cars["Model"] == "Honda Civic")
 print(cars.loc[sel, ["Model", "cyl", "gear"]])
 ````
-
+I practiced different ways of selecting data. Using ````.iloc````, I showed the first 5 rows with odd-numbered columns. Using ````.loc````, I filtered rows based on conditions like when the Model is Mazda RX4 or Camaro Z28, and displayed only the needed columns such as cylinders or gears. For multiple cars, I made a combined filter (````sel````) using OR (````|````) conditions.
 #### How it Works?
 
 ````cars.iloc[:5, ::2]```` - iloc means “pick by position (row/column number).”
@@ -78,7 +79,6 @@ print(cars.loc[sel, ["Model", "cyl", "gear"]])
 - Only shows the Model and cyl (cylinders) columns.
 
 Result: Tells us how many cylinders Camaro Z28 has.
-
 
 ````sel = (cars["Model"] == "Mazda RX4 Wag") | (cars["Model"] == "Ford Pantera L") | (cars["Model"] == "Honda Civic") cars.loc[sel, ["Model", "cyl", "gear"]] ```` - This creates a filter (sel) that selects rows if the Model matches one of the three.
 
